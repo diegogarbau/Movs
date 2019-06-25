@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  application:
+    name: movs
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    jdbc-url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+server:
+  port: 8085
+
+holiday:
+  property:
+    initial_year: 1888

@@ -1,0 +1,6 @@
+com\sopra\onBoarding\services\imp\MovServiceTest.class
+com\sopra\onBoarding\utils\TestUtils.class
+com\sopra\onBoarding\utils\MovTestUtils.class
+com\sopra\onBoarding\OnBoardingApplicationTests.class
+com\sopra\onBoarding\utils\ActorTestUtils.class
+com\sopra\onBoarding\controllers\imp\movControllerTest.class

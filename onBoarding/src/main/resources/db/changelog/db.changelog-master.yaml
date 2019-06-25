@@ -1,0 +1,63 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0.1
+      author: dgarbau
+      changes:
+        - createTable:
+            tableName: movies
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(50)
+              - column:
+                  name: genre
+                  type: varchar(50)
+              - column:
+                  name: year
+                  type: int
+              - column:
+                  name: cast
+                  type: varchar(500)
+        - createTable:
+            tableName: actors
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+        - createTable:
+            tableName: plays
+            columns:
+              - column:
+                  name: actors_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKey:
+                      referencedColumnNames: id
+                      referencedTableName: actors
+              - column:
+                  name: movies_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKey:
+                      referencedColumnNames: id
+                      referencedTableName: movies
